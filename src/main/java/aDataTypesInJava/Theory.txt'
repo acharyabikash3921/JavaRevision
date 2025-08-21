@@ -1,0 +1,56 @@
+                 ┌─────────────────────┐
+                 │    Data Types       │
+                 └─────────┬───────────┘
+                           │
+           ┌───────────────┴────────────────┐
+           │                                │
+   ┌───────▼───────┐                ┌───────▼────────┐
+   │ Primitive      │                │ Reference       │
+   └───────┬───────┘                └────────┬────────┘
+           │                                  │
+ ┌─────────▼─────────┐               ┌────────▼────────┐
+ │ byte, short, int, │               │ String, Arrays, │
+ │ long, float,      │               │ Classes, Enums, │
+ │ double, char,     │               │ Interfaces,     │
+ │ boolean           │               │ Wrapper classes │
+ └───────────────────┘               └──────────────────┘
+double d1 = 0.1;
+double d2 = 0.2;
+System.out.println(d1 + d2);  // Output: 0.30000000000000004
+✅ Rule of Thumb:
+
+Money & Finance → BigDecimal
+
+High-performance math → double (but accept tiny inaccuracies)
+
+Huge integers → BigInteger
+
+
+float and double are binary floating-point numbers → they cannot precisely represent all decimal fractions.
+BigDecimal is a class in java.math package (not a primitive).
+
+It is used to represent arbitrary-precision decimal numbers.
+
+Unlike float and double, it avoids rounding errors in financial, scientific, and mathematical calculations.
+⚠️ Avoid using new BigDecimal(double) directly because it can carry floating-point imprecision.
+
+Creating BigDecimal
+BigDecimal doesn’t support operators like +, -, *, /.
+Instead, you must use methods:
+There are multiple ways:
+
+BigDecimal bd1 = new BigDecimal("123.45");   // Best practice: use String
+BigDecimal bd2 = BigDecimal.valueOf(123.45); // Safe way (avoids float precision issues)
+BigDecimal bd3 = BigDecimal.TEN;
+
+Common rounding modes:
+
+HALF_UP → round 0.5 up (standard rounding).
+
+HALF_DOWN → round 0.5 down.
+
+HALF_EVEN → banker's rounding.
+
+CEILING → always round up.
+
+FLOOR → always round down.
