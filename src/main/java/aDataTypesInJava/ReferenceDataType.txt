@@ -1,0 +1,7 @@
+Key Points:
+Primitives = hold values directly (stack).
+Reference types = hold addresses of objects (heap).
+
+Reference types include Classes, Interfaces, Arrays, and Enums.
+They can store null, meaning no object is assigned.
+They are used for complex data and operations.
