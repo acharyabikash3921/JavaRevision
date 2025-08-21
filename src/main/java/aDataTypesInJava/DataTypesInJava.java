@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class DataTypesInJava {
-    public static void main(String[] args) {
+    public static void main() {
 
         double d1 = 0.1;
         double d2 = 0.2;
