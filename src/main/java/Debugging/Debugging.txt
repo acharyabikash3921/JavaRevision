@@ -1,0 +1,40 @@
+Windows/Linux: Ctrl+Alt+L
+Breakpoints
+
+Line Breakpoint: Stops execution at a specific line.
+
+Conditional Breakpoint: Only stops when a condition is true (x > 10).
+
+Method Breakpoint: Stops whenever a method is entered or exited.
+
+Field Watchpoint: Stops when a variable/field is read or written.
+
+Step Commands
+
+Step Into (F7) → Go into the method being called.
+
+Step Over (F8) → Skip over the method call (execute but don’t go inside).
+
+Step Out (Shift+F8) → Exit current method and return to the caller.
+
+Resume (F9) → Continue until the next breakpoint.
+
+Evaluate Expression (Alt+F8 / ⌥F8 on Mac)
+
+Lets you test code snippets, check values, or call methods during a paused state.
+
+Watches
+
+Track the value of variables/expressions as the code executes.
+
+Example: Watch user.getRole() or list.size() across iterations.
+
+Smart Step Into
+
+If multiple methods are chained (userService.getUser().getName()), you can pick which method to step into.
+
+Exception Breakpoints
+
+Stop execution when a particular exception is thrown (even if not caught).
+
+Super useful for debugging runtime errors (e.g., NullPointerException).
